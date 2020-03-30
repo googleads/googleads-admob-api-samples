@@ -22,7 +22,6 @@
     </developer>
   </developers>
 
-
   <url>http://maven.apache.org</url>
   <dependencies>
     <!-- https://mvnrepository.com/artifact/com.google.apis/google-api-services-admob -->
