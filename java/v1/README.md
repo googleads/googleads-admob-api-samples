@@ -22,7 +22,7 @@ To get started quickly, follow these steps.
 ## Set up your environment ##
 ### Via the command line ###
 
-Execute the following command in the directory where the pom.xml file exists. This file is found in the root directory of the AdMob API Java client library samples.
+Execute the following command in the directory where the `pom.xml` file exists. This file is found in the root directory of the AdMob API Java client library samples.
 
     $ mvn compile
 
