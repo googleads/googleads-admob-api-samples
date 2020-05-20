@@ -46,11 +46,7 @@ class GenerateNetworkReport
             $networkReportRequest
         );
 
-        /* Create a simplified object suitable for straightforward
-         * conversion to JSON. This is relatively expensive
-         * due to the usage of reflection, but is the most straightforward
-         * way to filter.
-         */
+        // Convert network report response to a simple object.
         $networkReportResponse = $networkReportResponse->tosimpleObject();
 
         // Print each record in the report.
@@ -69,7 +65,6 @@ class GenerateNetworkReport
      */
     public static function createNetworkReportRequest()
     {
-
         /*
          * AdMob API only supports the account default timezone and
          * "America/Los_Angeles", see
