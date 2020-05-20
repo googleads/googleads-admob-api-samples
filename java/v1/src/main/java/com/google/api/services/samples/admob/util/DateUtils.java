@@ -21,7 +21,7 @@ import java.time.Clock;
 import java.time.ZonedDateTime;
 
 /*
- * Helper class to create the AdMob Reporting API Date object.
+ * Helper class to create the AdMob API Date object.
  */
 public final class DateUtils {
 
