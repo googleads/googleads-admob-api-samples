@@ -97,9 +97,9 @@ public class AdMobFactory {
    * @return A {@link Credential} object initialized with user account credentials.
    */
   private static Credential loadUserCredentials(
-      String clientSecretsFile, @Nonnull DataStoreFactory dataStoreFactory) 
+      String clientSecretsFile, @Nonnull DataStoreFactory dataStoreFactory)
       throws CredentialException, IOException, RuntimeException {
-        
+
     // Load client secrets JSON file.
     GoogleClientSecrets clientSecrets = null;
     try (Reader reader = Files.newBufferedReader(Paths.get(clientSecretsFile), UTF_8)) {
