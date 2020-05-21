@@ -1,6 +1,6 @@
-# AdMob Reporting API Java Samples
+# AdMob API Java Samples
 
-This collection of samples written in Java provide usage examples for the AdMob Reporting API.
+This collection of samples written in Java provide usage examples for the AdMob API.
 
 ## Prerequisites
 
@@ -46,4 +46,4 @@ Once you've checked out the code:
 
 3. Complete the authorization steps on your browser.
 
-4. Examine the console output, and explore the AdMob Reporting API!
+4. Examine the console output, and explore the AdMob API!
