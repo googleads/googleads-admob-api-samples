@@ -6,6 +6,7 @@ The code samples are organized by platform or language, and then API version. Th
 
 * *java* a collection of Java samples.
 * *php* a collection of PHP samples.
+* *python* a collection of Python samples.
 
 Please refer to the README.md file inside the directory for installation instructions.
 
