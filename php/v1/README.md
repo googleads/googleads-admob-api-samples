@@ -14,11 +14,15 @@ This API uses OAuth 2.0. See [Using OAuth 2.0 to Access Google APIs](https://dev
 To get started quickly, follow these steps.
 
 1. Visit https://console.developers.google.com to register your application.
-1. From the API Manager -> Google APIs screen, activate access to **AdMob API**.
-1. Click on **Credentials** in the left navigation menu.
-1. Click the button labeled **Create credentials** and select **OAuth Client ID**.
-1. Select **Other** as the **Application type**, then **Create**.
-1. From the Credentials page, click **Download JSON** next to the client ID you just created and save the file as `client_secrets.json` in the root directory of the samples.
+1. From the [API Library](https://pantheon.corp.google.com/apis/library), enable
+   the **AdMob API**.
+1. Click on **APIs & Services > Credentials** in the left navigation menu.
+1. Click **CREATE CREDENTIALS > OAuth client ID**.
+1. Select **Desktop app** as the application type, give it a name, then click
+   **Create**.
+1. From the Credentials page, click **Download JSON** next to the client ID you
+   just created and save the file as `client_secrets.json` in the root directory
+   of the samples.
 
 ## Set up your environment ##
 ### Via the command line ###

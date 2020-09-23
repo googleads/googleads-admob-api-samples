@@ -21,7 +21,7 @@ import com.google.api.services.admob.v1.model.PublisherAccount;
 import com.google.api.services.samples.admob.AdMobFactory;
 
 /** This example illustrates how to get information on an account. */
-public class GetAccounts {
+public class GetAccount {
   /* ACCOUNT_NAME should follow the format "accounts/pub-XXXXXXXXXXXXXXXX"
    * where "pub-XXXXXXXXXXXXXXXX" is your publisher ID
    * See https://support.google.com/admob/answer/2784578

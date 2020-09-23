@@ -22,7 +22,7 @@ import com.google.api.services.admob.v1.model.PublisherAccount;
 import com.google.api.services.samples.admob.AdMobFactory;
 
 /** This example illustrates how to get a list of accounts. */
-public class GetList {
+public class ListAccounts {
 
   public static void runExample(AdMob adMob) throws Exception {
 
