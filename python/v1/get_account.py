@@ -29,18 +29,18 @@ def get_account(service, publisher_id):
   """
 
   # Execute the request.
-  result = service.accounts().get(
+  response = service.accounts().get(
       name='accounts/{}'.format(publisher_id)).execute()
 
-  # Print the result.
-  print('Name: ' + result['name'])
-  print('Publisher ID: ' + result['publisherId'])
-  print('Currency code: ' + result['currencyCode'])
-  print('Reporting time zone: ' + result['reportingTimeZone'])
+  # Print the response.
+  print('Name: ' + response['name'])
+  print('Publisher ID: ' + response['publisherId'])
+  print('Currency code: ' + response['currencyCode'])
+  print('Reporting time zone: ' + response['reportingTimeZone'])
 
 
 def main():
-  service = admob_utils.authenticate()
+  service = admob_utils.authenticate('v1')
   get_account(service, PUBLISHER_ID)
 
 

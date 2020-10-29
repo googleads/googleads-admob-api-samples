@@ -67,17 +67,17 @@ def generate_network_report(service, publisher_id):
   request = {'report_spec': report_spec}
 
   # Execute network report request.
-  result = service.accounts().networkReport().generate(
+  response = service.accounts().networkReport().generate(
       parent='accounts/{}'.format(publisher_id), body=request).execute()
 
-  # Display results.
-  for report_line in result:
+  # Display responses.
+  for report_line in response:
     print(report_line)
   print()
 
 
 def main():
-  service = admob_utils.authenticate()
+  service = admob_utils.authenticate('v1')
   generate_network_report(service, PUBLISHER_ID)
 
 

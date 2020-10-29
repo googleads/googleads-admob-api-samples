@@ -19,9 +19,16 @@ from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
 
+# Constants for the AdMob API service.
 API_NAME = 'admob'
-API_VERSION = 'v1'
-API_SCOPE = 'https://www.googleapis.com/auth/admob.report'
+API_VERSION_v1 = 'v1'
+API_VERSION_v1beta = 'v1beta'
+API_SCOPES = [
+    'https://www.googleapis.com/auth/admob.report',
+    'https://www.googleapis.com/auth/admob.readonly'
+]
+API_SCOPE_REPORT = 'https://www.googleapis.com/auth/admob.report'
+API_SCOPE_READONLY = 'https://www.googleapis.com/auth/admob.readonly'
 
 # Store refresh tokens in a local disk file. This file contains sensitive
 # authorization information.
@@ -38,13 +45,24 @@ def load_user_credentials():
 
 
 # Authenticate user and create AdMob Service Object.
-def authenticate():
+def authenticate(version):
   """Authenticates a user and creates an AdMob Service Object.
 
   Returns:
     An AdMob Service Object that is authenticated with the user using either
     a client_secrets file or previously stored access and refresh tokens.
+
+  Args:
+    version: The version of the AdMob Service Object. Allowed values are 'v1' or 'v1beta'.
   """
+
+  if version == 'v1':
+    API_VERSION = API_VERSION_v1
+  elif version == 'v1beta':
+    API_VERSION = API_VERSION_v1beta
+  else:
+    print('Please enter a valid version. Select from v1 or v1beta')
+    return
 
   # The TOKEN_FILE stores the user's access and refresh tokens, and is
   # created automatically when the authorization flow completes for the first
@@ -62,7 +80,7 @@ def authenticate():
     client_secrets = load_user_credentials()
     flow = Flow.from_client_secrets_file(
         client_secrets,
-        scopes=[API_SCOPE],
+        scopes=API_SCOPES,
         redirect_uri='urn:ietf:wg:oauth:2.0:oob')
 
     # Redirect the user to auth_url on your platform.
