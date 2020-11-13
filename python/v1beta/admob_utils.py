@@ -21,7 +21,7 @@ from google.auth.transport.requests import Request
 
 # Constants for the AdMob API service.
 API_NAME = 'admob'
-API_VERSION = 'v1'
+API_VERSION = 'v1beta'
 API_SCOPES = [
     'https://www.googleapis.com/auth/admob.report',
     'https://www.googleapis.com/auth/admob.readonly'
