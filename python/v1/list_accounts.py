@@ -18,17 +18,17 @@ import admob_utils
 def list_accounts(service):
   """Gets and prints a list of AdMob accounts.
 
-  Note: the list method is currently limited to returning a single result.
+  Note: the list method is currently limited to returning a single response.
 
   Args:
     service: An AdMob Service Object.
   """
 
   # Execute the request.
-  result = service.accounts().list(pageSize=1).execute()
+  response = service.accounts().list(pageSize=1).execute()
 
-  # Print the result.
-  account_list = result['account']
+  # Print the response.
+  account_list = response['account']
   for account in account_list:
     print('Name: ' + account['name'])
     print('Publisher ID: ' + account['publisherId'])

@@ -1,4 +1,4 @@
-# AdMob API Python Samples
+# AdMob API v1beta Python Samples
 
 This collection of samples written in Python provide usage examples for the AdMob API.
 

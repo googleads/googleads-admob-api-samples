@@ -21,7 +21,7 @@ from google.auth.transport.requests import Request
 
 # Constants for the AdMob API service.
 API_NAME = 'admob'
-API_VERSION = 'v1'
+API_VERSION = 'v1beta'
 API_SCOPE = 'https://www.googleapis.com/auth/admob.readonly'
 
 # Store refresh tokens in a local disk file. This file contains sensitive
