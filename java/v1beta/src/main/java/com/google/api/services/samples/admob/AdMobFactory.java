@@ -29,7 +29,7 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.util.store.DataStoreFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
-import com.google.api.services.admob.v1.AdMob;
+import com.google.api.services.admob.v1beta.AdMob;
 import com.google.common.collect.ImmutableSet;
 import java.io.IOException;
 import java.io.Reader;
@@ -93,7 +93,7 @@ public class AdMobFactory {
    * the provided data store.
    *
    * @param clientSecretsFile The path to the file containing client secrets.
-   * @param dataStoreFactory he data store to use for caching credential information.
+   * @param dataStoreFactory The data store to use for caching credential information.
    * @return A {@link Credential} object initialized with user account credentials.
    */
   private static Credential loadUserCredentials(

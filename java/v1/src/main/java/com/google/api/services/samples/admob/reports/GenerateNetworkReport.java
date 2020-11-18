@@ -101,8 +101,8 @@ public class GenerateNetworkReport {
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();
 
+    // Generate network report request.
     GenerateNetworkReportRequest request = getNetworkReportRequest();
-
     runExample(adMob, ACCOUNT_NAME, request);
   }
 }

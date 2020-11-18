@@ -45,7 +45,6 @@ public class GetAccount {
 
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();
-
     runExample(adMob, ACCOUNT_NAME);
   }
 }

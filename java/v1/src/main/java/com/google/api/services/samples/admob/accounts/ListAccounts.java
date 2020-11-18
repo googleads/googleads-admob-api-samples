@@ -42,7 +42,6 @@ public class ListAccounts {
 
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();
-
     runExample(adMob);
   }
 }

@@ -124,7 +124,6 @@ public class GenerateMediationReport {
 
     // Generate mediation report request.
     GenerateMediationReportRequest request = getMediationReportRequest();
-
     runExample(adMob, ACCOUNT_NAME, request);
   }
 }
