@@ -41,7 +41,7 @@ public class ListAdUnits {
     String nextPageToken = null;
 
     do {
-      // Create and execute the apps list request.
+      // Create and execute the ad units list request.
       response =
           adMob
               .accounts()
