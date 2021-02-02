@@ -14,17 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.api.services.samples.admob.apps;
+package com.google.api.services.samples.admob.adunits;
 
-import com.google.api.services.admob.v1beta.AdMob;
-import com.google.api.services.admob.v1beta.model.App;
-import com.google.api.services.admob.v1beta.model.AppLinkedAppInfo;
-import com.google.api.services.admob.v1beta.model.ListAppsResponse;
+import com.google.api.services.admob.v1.AdMob;
+import com.google.api.services.admob.v1.model.AdUnit;
+import com.google.api.services.admob.v1.model.ListAdUnitsResponse;
 import com.google.api.services.samples.admob.AdMobFactory;
 import java.util.List;
 
-/** This example illustrates how to get a list of apps. */
-public class ListApps {
+/** This example illustrates how to get a list of ad units. */
+public class ListAdUnits {
   /* ACCOUNT_NAME should follow the format "accounts/pub-XXXXXXXXXXXXXXXX"
    * where "pub-XXXXXXXXXXXXXXXX" is your publisher ID
    * See https://support.google.com/admob/answer/2784578
@@ -38,39 +37,36 @@ public class ListApps {
 
   public static void runExample(AdMob adMob) throws Exception {
 
-    ListAppsResponse response;
+    ListAdUnitsResponse response;
     String nextPageToken = null;
 
     do {
-      // Create and execute the apps list request.
+      // Create and execute the ad units list request.
       response =
           adMob
               .accounts()
-              .apps()
+              .adUnits()
               .list(ACCOUNT_NAME)
               .setPageSize(PAGE_SIZE)
               .setPageToken(nextPageToken)
               .execute();
 
-      // Display apps.
-      List<App> apps = response.getApps();
-
-      for (App app : apps) {
-        AppLinkedAppInfo linkedAppInfo = app.getLinkedAppInfo();
-
+      // Display ad units.
+      List<AdUnit> adUnits = response.getAdUnits();
+      for (AdUnit adUnit : adUnits) {
         System.out.printf(
-            "App Name: %s, "
-                + "App ID: %s, "
-                + "App Platform: %s, "
-                + "App Store ID: %s, "
-                + "App Store Display Name: %s, "
-                + "App Manual Info: %s%n",
-            app.getName(),
-            app.getAppId(),
-            app.getPlatform(),
-            linkedAppInfo == null ? "" : linkedAppInfo.getAppStoreId(),
-            linkedAppInfo == null ? "" : linkedAppInfo.getDisplayName(),
-            app.getManualAppInfo().getDisplayName());
+            "Ad Unit Display Name: %s, "
+                + "Ad Unit Name: %s, "
+                + "Ad Unit ID: %s, "
+                + "Ad Unit Format: %s, "
+                + "Ad Unit App ID: %s, "
+                + "Ad Unit Ad Types: %s%n",
+            adUnit.getDisplayName(),
+            adUnit.getName(),
+            adUnit.getAdUnitId(),
+            adUnit.getAdFormat(),
+            adUnit.getAppId(),
+            adUnit.getAdTypes());
       }
 
       // Update the next page token.
