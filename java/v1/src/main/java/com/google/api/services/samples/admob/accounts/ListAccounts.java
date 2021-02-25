@@ -26,7 +26,8 @@ public class ListAccounts {
 
   public static void runExample(AdMob adMob) throws Exception {
 
-    // Get publisher account which always returns a single account.
+    // Lists the AdMob publisher account that was most recently signed in to from the
+    // AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
     ListPublisherAccountsResponse accountsList = adMob.accounts().list().setPageSize(1).execute();
 
     // Display publisher accounts.
