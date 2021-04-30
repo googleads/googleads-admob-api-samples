@@ -27,6 +27,8 @@ use Examples\Reports\GenerateMediationReport;
 use Examples\Reports\GenerateNetworkReport;
 use Examples\Accounts\ListAccounts;
 use Examples\Accounts\GetAccount;
+use Examples\AdUnits\ListAdUnits;
+use Examples\Apps\ListApps;
 
 use function HtmlHelper\pageHeader;
 use function HtmlHelper\pageFooter;
@@ -38,8 +40,11 @@ session_start();
 define('STORE_ON_DISK', true);
 define('TOKEN_FILENAME', 'tokens.dat');
 
+// Max results per page.
+define('MAX_LIST_PAGE_SIZE', 1000);
+
 $client = new Google_Client();
-$client->addScope('https://www.googleapis.com/auth/admob.report');
+$client->addScope('https://www.googleapis.com/auth/admob.readonly');
 $client->setApplicationName('AdMob API PHP Quickstart');
 $client->setAccessType('offline');
 
@@ -139,6 +144,8 @@ function makeRequests($service)
         GetAccount::run($service, $accountName);
         GenerateNetworkReport::run($service, $accountName);
         GenerateMediationReport::run($service, $accountName);
+        ListApps::run($service, $accountName, MAX_LIST_PAGE_SIZE);
+        ListAdUnits::run($service, $accountName, MAX_LIST_PAGE_SIZE);
     } else {
         echo 'Please specify the account_name, which should follow a format of
             "accounts/pub-XXXXXXXXXXXXXXXX".

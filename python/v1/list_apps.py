@@ -25,8 +25,8 @@ PUBLISHER_ID = 'pub-XXXXXXXXXXXXXXXX'
 PAGE_SIZE = 1000
 
 
-def list_ad_units(service, publisher_id):
-  """Gets and prints a list of ad units.
+def list_apps(service, publisher_id):
+  """Gets and prints a list of apps.
 
   Args:
     service: An AdMob Service Object.
@@ -37,7 +37,7 @@ def list_ad_units(service, publisher_id):
 
   while True:
     # Execute the request.
-    response = service.accounts().adUnits().list(
+    response = service.accounts().apps().list(
         pageSize=PAGE_SIZE,
         pageToken=next_page_token,
         parent='accounts/{}'.format(publisher_id)).execute()
@@ -47,24 +47,32 @@ def list_ad_units(service, publisher_id):
       break
 
     # Print the result.
-    ad_units = response['adUnits']
-    for ad_unit in ad_units:
-      print('Ad Unit Display Name: ' + ad_unit['displayName'])
-      print('Ad Unit Name: ' + ad_unit['name'])
-      print('Ad Unit ID: ' + ad_unit['adUnitId'])
-      print('Ad Unit Format: ' + ad_unit['adFormat'])
-      print('Ad Unit ID: ' + ad_unit['appId'])
-      print('Ad Unit Format: ' + ', '.join(ad_unit['adTypes']))
+    apps = response['apps']
+    for app in apps:
+      print('App ID: ' + app['appId'])
+      print('App Platform: ' + app['platform'])
+      print('App Name: ' + app['name'])
+
+      if 'linkedAppInfo' in app:
+        linked_app_info = app['linkedAppInfo']
+        print('App Store ID: ' + linked_app_info['appStoreId'])
+        if 'displayName' in linked_app_info:
+          print('App Store Display Name: ' + linked_app_info['displayName'])
+
+      if 'manualAppInfo' in app:
+        manual_app_info = app['manualAppInfo']
+        print('App Manual Info: ' + manual_app_info['displayName'])
 
     if 'nextPageToken' not in response:
       break
+
     # Update the next page token.
     next_page_token = response['nextPageToken']
 
 
 def main():
   service = admob_utils.authenticate()
-  list_ad_units(service, PUBLISHER_ID)
+  list_apps(service, PUBLISHER_ID)
 
 
 if __name__ == '__main__':
