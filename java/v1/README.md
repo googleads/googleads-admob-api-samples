@@ -13,7 +13,7 @@ This API uses OAuth 2.0. See [Using OAuth 2.0 to Access Google APIs](https://dev
 To get started quickly, follow these steps.
 
 1. Visit https://console.developers.google.com to register your application.
-1. From the [API Library](https://pantheon.corp.google.com/apis/library), enable
+1. From the [API Library](https://console.cloud.google.com/start/api?id=admob.googleapis.com), enable
    the **AdMob API**.
 1. Click on **APIs & Services > Credentials** in the left navigation menu.
 1. Click **CREATE CREDENTIALS > OAuth client ID**.
