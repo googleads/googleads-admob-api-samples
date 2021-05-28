@@ -51,7 +51,7 @@ class ListApps
             // Print list of apps.
             if (!empty($apps)) {
                 foreach ($apps as $app) {
-                    if(!empty($app->getLinkedAppInfo)){
+                    if(!empty($app->getLinkedAppInfo())){
                         $appStoreId = $app->getLinkedAppInfo()->getAppStoreId();
                         $displayName = $app->getLinkedAppInfo()->getDisplayName();
                     } else {
