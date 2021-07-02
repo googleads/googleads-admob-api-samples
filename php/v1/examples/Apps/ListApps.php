@@ -37,6 +37,7 @@ class ListApps
         print "List AdMob Apps\n";
         print $separator;
 
+        // [START main_body]
         // Create the page token variable.
         $pageToken = '';
 
@@ -76,6 +77,7 @@ class ListApps
             }
             $pageToken = $response->getNextPageToken();
         } while ($pageToken);
+        // [END main_body]
 
         print "\n";
     }

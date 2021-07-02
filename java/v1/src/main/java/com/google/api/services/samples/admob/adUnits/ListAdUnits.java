@@ -31,6 +31,7 @@ public class ListAdUnits {
    */
   private static final String ACCOUNT_NAME = "accounts/pub-XXXXXXXXXXXXXXXX";
 
+  // [START main_body]
   // Defines maximum size page to retrieve. A smaller page size will require more API requests, see
   // inventory quota limits at https://developers.google.com/admob/api/quotas.
   private static final Integer PAGE_SIZE = 1000;
@@ -73,6 +74,7 @@ public class ListAdUnits {
       nextPageToken = response.getNextPageToken();
     } while (nextPageToken != null);
   }
+  // [END main_body]
 
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();

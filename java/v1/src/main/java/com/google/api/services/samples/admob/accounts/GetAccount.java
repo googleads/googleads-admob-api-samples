@@ -22,6 +22,7 @@ import com.google.api.services.samples.admob.AdMobFactory;
 
 /** This example illustrates how to get information on an account. */
 public class GetAccount {
+  // [START main_body]
   /* ACCOUNT_NAME should follow the format "accounts/pub-XXXXXXXXXXXXXXXX"
    * where "pub-XXXXXXXXXXXXXXXX" is your publisher ID
    * See https://support.google.com/admob/answer/2784578
@@ -42,6 +43,7 @@ public class GetAccount {
         account.getCurrencyCode(),
         account.getReportingTimeZone());
   }
+  // [END main_body]
 
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();

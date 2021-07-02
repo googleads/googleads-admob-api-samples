@@ -25,6 +25,7 @@ use Examples\Utils\DateUtils;
  */
 class GenerateMediationReport
 {
+    // [START main_body]
     /**
      * Generates a mediation report.
      *
@@ -105,4 +106,5 @@ class GenerateMediationReport
 
         return $mediationReportRequest;
     }
+    // [END main_body]
 }

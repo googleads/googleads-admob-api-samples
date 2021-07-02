@@ -14,6 +14,7 @@
 
 import admob_utils
 
+// [START main_body]
 # Set the 'PUBLISHER_ID' which follows the format "pub-XXXXXXXXXXXXXXXX".
 # See https://support.google.com/admob/answer/2784578
 # for instructions on how to find your publisher ID.
@@ -38,6 +39,7 @@ def get_account(service, publisher_id):
   print('Currency code: ' + response['currencyCode'])
   print('Reporting time zone: ' + response['reportingTimeZone'])
 
+// [END main_body]
 
 def main():
   service = admob_utils.authenticate()

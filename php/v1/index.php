@@ -43,6 +43,7 @@ define('TOKEN_FILENAME', 'tokens.dat');
 // Max results per page.
 define('MAX_LIST_PAGE_SIZE', 1000);
 
+// [START main_body]
 $client = new Google_Client();
 $client->addScope('https://www.googleapis.com/auth/admob.readonly');
 $client->setApplicationName('AdMob API PHP Quickstart');
@@ -54,12 +55,14 @@ $client->setAuthConfig('client_secrets.json');
 
 $service = new Google_Service_AdMob($client);
 
+// [START_EXCLUDE]
 // If we're logging out we just need to clear our local access token.
 // Note that this only logs you out of the session. If STORE_ON_DISK is
 // enabled and you want to remove stored data, delete the file.
 if (isset($_REQUEST['logout'])) {
     unset($_SESSION['access_info']);
 }
+// [END_EXCLUDE]
 
 // Configure redirect uri to return to main page once the authentication workflow has completed.
 $redirectUri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
@@ -80,6 +83,7 @@ if (isset($_GET['code'])) {
     header('Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
     exit;
 }
+// [END main_body]
 
 // If we have an access token, we can make requests, else we generate an
 // authentication URL.

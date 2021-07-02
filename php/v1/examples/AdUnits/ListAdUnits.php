@@ -37,6 +37,7 @@ class ListAdUnits
         print "List AdMob Ad Units\n";
         print $separator;
 
+        // [START main_body]
         // Create the page token variable.
         $pageToken = '';
 
@@ -69,7 +70,8 @@ class ListAdUnits
             }
             $pageToken = $response->getNextPageToken();
         } while ($pageToken);
-
+        // [END main_body]
+      
         print "\n";
     }
 }

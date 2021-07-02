@@ -37,6 +37,7 @@ class GetAccount
         print "Get AdMob Account\n";
         print $separator;
 
+        // [START main_body]
         // Get account.
         $result = $service->accounts->get($accountName);
 
@@ -56,6 +57,7 @@ class GetAccount
         } else {
             print "No accounts found.\n";
         }
+        // [END main_body]
         print "\n";
     }
 }

@@ -25,6 +25,7 @@ use Examples\Utils\DateUtils;
  */
 class GenerateNetworkReport
 {
+    // [START main_body]
     /**
      * Generates a network report.
      *
@@ -91,4 +92,5 @@ class GenerateNetworkReport
 
         return $networkReportRequest;
     }
+    // [END main_body]
 }

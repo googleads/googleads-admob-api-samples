@@ -26,6 +26,7 @@ def list_accounts(service):
     service: An AdMob Service Object.
   """
 
+  // [START main_body]
   # Execute the request.
   response = service.accounts().list(pageSize=1).execute()
 
@@ -36,6 +37,7 @@ def list_accounts(service):
     print('Publisher ID: ' + account['publisherId'])
     print('Currency code: ' + account['currencyCode'])
     print('Reporting time zone: ' + account['reportingTimeZone'])
+  // [END main_body]
 
 
 def main():

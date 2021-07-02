@@ -34,6 +34,7 @@ import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.List;
 
+
 /** This example illustrates how to generate a network report. */
 public class GenerateNetworkReport {
   /* ACCOUNT_NAME should follow the format "accounts/pub-XXXXXXXXXXXXXXXX"
@@ -43,6 +44,7 @@ public class GenerateNetworkReport {
    */
   private static final String ACCOUNT_NAME = "accounts/pub-XXXXXXXXXXXXXXXX";
 
+  // [START main_body]
   public static void runExample(
       AdMob adMob, String accountName, GenerateNetworkReportRequest request)
       throws Exception {
@@ -97,6 +99,7 @@ public class GenerateNetworkReport {
     // Create network report request.
     return new GenerateNetworkReportRequest().setReportSpec(reportSpec);
   }
+  // [END main_body]
 
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();
@@ -106,3 +109,4 @@ public class GenerateNetworkReport {
     runExample(adMob, ACCOUNT_NAME, request);
   }
 }
+

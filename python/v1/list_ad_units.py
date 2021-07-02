@@ -33,6 +33,7 @@ def list_ad_units(service, publisher_id):
     publisher_id: An ID that identifies the publisher.
   """
 
+  // [START main_body]
   next_page_token = ''
 
   while True:
@@ -61,6 +62,7 @@ def list_ad_units(service, publisher_id):
       break
     # Update the next page token.
     next_page_token = response['nextPageToken']
+    // [END main_body]
 
 
 def main():

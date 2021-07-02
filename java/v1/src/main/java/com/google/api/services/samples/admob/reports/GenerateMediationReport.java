@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 /** This example illustrates how to generate a mediation report. */
 public class GenerateMediationReport {
   /* ACCOUNT_NAME should follow the format "accounts/pub-XXXXXXXXXXXXXXXX"
@@ -47,6 +48,7 @@ public class GenerateMediationReport {
    */
   private static final String ACCOUNT_NAME = "accounts/pub-XXXXXXXXXXXXXXXX";
 
+  // [START main_body]
   public static void runExample(
       AdMob adMob, String accountName, GenerateMediationReportRequest request)
       throws Exception {
@@ -118,6 +120,7 @@ public class GenerateMediationReport {
     // Create mediation report request.
     return new GenerateMediationReportRequest().setReportSpec(reportSpec);
   }
+  // [END main_body]
 
   public static void main(String[] args) throws Exception {
     AdMob adMob = AdMobFactory.getInstance();
@@ -127,3 +130,4 @@ public class GenerateMediationReport {
     runExample(adMob, ACCOUNT_NAME, request);
   }
 }
+

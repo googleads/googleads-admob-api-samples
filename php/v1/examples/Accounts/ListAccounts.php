@@ -36,6 +36,7 @@ class ListAccounts
         print "List AdMob Accounts\n";
         print $separator;
 
+        // [START main_body]
         // Lists the AdMob publisher account that was most recently signed in to from the
         // AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
         $result = $service->accounts->listAccounts();
@@ -59,6 +60,7 @@ class ListAccounts
         } else {
             print "No accounts found.\n";
         }
+        // [END main_body]
         print "\n";
     }
 

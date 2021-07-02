@@ -88,6 +88,7 @@ public class AdMobFactory {
     return null;
   }
 
+  // [START main_body]
   /**
    * Attempts to load user credentials from the provided client secrets file and persists data to
    * the provided data store.
@@ -130,4 +131,5 @@ public class AdMobFactory {
         .setApplicationName("admobapi-java-samples")
         .build();
   }
+  // [END main_body]
 }
