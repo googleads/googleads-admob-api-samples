@@ -33,7 +33,7 @@ def list_apps(service, publisher_id):
     publisher_id: An ID that identifies the publisher.
   """
 
-  // [START main_body]
+  # [START main_body]
   next_page_token = ''
 
   while True:
@@ -69,7 +69,7 @@ def list_apps(service, publisher_id):
 
     # Update the next page token.
     next_page_token = response['nextPageToken']
-  // [END main_body]
+  # [END main_body]
 
 
 def main():

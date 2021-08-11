@@ -28,7 +28,7 @@ def generate_network_report(service, publisher_id):
     publisher_id: An ID that identifies the publisher.
   """
 
-  // [START main_body]
+  # [START main_body]
   # Set date range. AdMob API only supports the account default timezone and
   # "America/Los_Angeles", see
   # https://developers.google.com/admob/api/v1/reference/rest/v1/accounts.networkReport/generate
@@ -75,7 +75,7 @@ def generate_network_report(service, publisher_id):
   for report_line in response:
     print(report_line)
   print()
-  // [END main_body]
+  # [END main_body]
 
 
 def main():
