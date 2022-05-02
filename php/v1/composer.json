@@ -5,7 +5,7 @@
   "require": {
     "php": ">=7.2",
     "google/apiclient": "^2.0",
-    "google/apiclient-services": "dev-master"
+    "google/apiclient-services": "dev-main"
   },
   "autoload": {
     "psr-4": { "Examples\\": "examples/" },

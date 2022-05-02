@@ -47,7 +47,13 @@ define('MAX_LIST_PAGE_SIZE', 1000);
 $client = new Google_Client();
 $client->addScope('https://www.googleapis.com/auth/admob.readonly');
 $client->setApplicationName('AdMob API PHP Quickstart');
+// Offline access will give you both an access and refresh token so that
+// your app can refresh the access token without user interaction.
 $client->setAccessType('offline');
+// Using "force" ensures that your application always receives a refresh token.
+// If you are not using offline access, you can omit this.
+$client->setApprovalPrompt('force');
+$client->setIncludeGrantedScopes(true);
 
 // Be sure to replace the contents of client_secrets.json with your developer
 // credentials.
@@ -77,7 +83,7 @@ if (isset($_GET['code'])) {
     // access and refresh tokens as fields, assuming both are available.
     $_SESSION['access_info'] = $client->getAccessToken();
     if (STORE_ON_DISK) {
-        file_put_contents(TOKEN_FILENAME, $_SESSION['access_info']);
+        file_put_contents(TOKEN_FILENAME, json_encode($_SESSION['access_info']));
     }
     $redirect = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
     header('Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
