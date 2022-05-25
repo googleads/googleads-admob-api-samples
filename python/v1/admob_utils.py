@@ -23,6 +23,7 @@ from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
 
+# [START main_body]
 PORT = 8080
 REDIRECT_URI = f"http://127.0.0.1:{PORT}"
 
@@ -181,3 +182,4 @@ def _parse_raw_query_params(data):
   pairs = [pair.split("=") for pair in params.split("&")]
   # Convert pairs to a dict to make it easy to access the values
   return {key: val for key, val in pairs}
+  # [END main_body]
