@@ -1,0 +1,5 @@
+# AdMob API Xflow Mediation add-on
+
+This appscript project creates a Google workspace add-on that can update
+mediation configurations based on data in a Google spreadsheet. See the
+design doc for additional information: go/xflow-write-api-tool.

@@ -1,0 +1,24 @@
+{
+  "timeZone": "Pacific/Honolulu",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/spreadsheets.currentonly",
+    "https://www.googleapis.com/auth/admob.monetization",
+    "https://www.googleapis.com/auth/admob.readonly",
+  ],
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "AdMob API",
+      "logoUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_admob_800px_logo_admob.max-500x500.png",
+      "layoutProperties": {
+        "primaryColor": "#2772ed"
+      },
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      }
+    }
+  }
+}
