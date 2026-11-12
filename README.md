@@ -10,6 +10,10 @@ The code samples are organized by platform or language, and then API version. Th
 
 Please refer to the README.md file inside the directory for installation instructions.
 
+Support
+=======
+For support and questions about the AdMob API, please submit all new inquiries via our [AdMob API Support form](https://support.google.com/admob/gethelp).
+
 Contributing
 ============
 Pull requests are welcome! Please sign [this Google Code contributor agreement](CONTRIBUTING.md) before submitting.
