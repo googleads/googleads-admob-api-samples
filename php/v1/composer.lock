@@ -577,16 +577,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.37",
+            "version": "2.0.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c"
+                "reference": "d73c9e019a895be83b18a2ccccfa7e2b0a648743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
-                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d73c9e019a895be83b18a2ccccfa7e2b0a648743",
+                "reference": "d73c9e019a895be83b18a2ccccfa7e2b0a648743",
                 "shasum": ""
             },
             "require": {
@@ -594,14 +594,15 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^8.5|^9.4",
                 "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
                 "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
                 "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
                 "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
+                "ext-xml": "Install the XML extension to load XML formatted public keys."
             },
             "type": "library",
             "autoload": {
@@ -664,6 +665,10 @@
                 "x.509",
                 "x509"
             ],
+            "support": {
+                "issues": "https://github.com/phpseclib/phpseclib/issues",
+                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.55"
+            },
             "funding": [
                 {
                     "url": "https://github.com/terrafrost",
@@ -678,7 +683,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-04T04:57:45+00:00"
+            "time": "2026-06-14T19:53:12+00:00"
         },
         {
             "name": "psr/cache",
@@ -1113,6 +1118,6 @@
     "platform": {
         "php": ">=7.2"
     },
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
